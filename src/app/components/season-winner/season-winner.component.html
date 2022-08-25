@@ -1,0 +1,26 @@
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<div class="main-div">
+  <div class="main-div card border-dark mb-3" style="max-width: 18rem">
+    <div class="card text-center">
+      <div class="col-sm d-flex">
+        <div class="card card-body flex-fill">
+          <h5 class="card-title">Season: {{ standingList.season }}</h5>
+          <p class="card-text">Round: {{ standingList.round }}</p>
+
+          <h4 class="text-primary">
+            <i class="fa fa-trophy" aria-hidden="true"></i>
+            {{ standingList.DriverStandings[0].Driver.givenName }}
+            {{ standingList.DriverStandings[0].Driver.familyName }}
+          </h4>
+          <hr />
+          <a href="#" class="btn btn-primary" (click)="onClickSeason()"
+            >{{ standingList.season }} Race Winners</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

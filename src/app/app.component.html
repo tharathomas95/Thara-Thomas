@@ -1,0 +1,24 @@
+<div id="mainpage_container">
+  <div class="text-center">
+    <img width="182" alt="Formula 1" src="assets/f1_image.png" />
+    <h1 class="text-uppercase">World Champions</h1>
+    <h5>2005 - 2022</h5>
+  </div>
+  <hr />
+
+  <section>
+    <div class="row">
+      <div
+        class="col-sm-12 col-md-6"
+        *ngFor="let list of allStandingList; let i = index"
+      >
+        <app-season-winner
+          [standingList]="list"
+          (viewSeasonEvent)="viewSeasonDetails($event)"
+        ></app-season-winner>
+      </div>
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+</div>
